@@ -20,7 +20,7 @@ export default async function BlogArticleWrapper({
 
   return (
     <>
-      <Container as="article" className="mt-24 sm:mt-32 lg:mt-40">
+      <Container as="article" className="mt-24 sm:mt-32 lg:mt-30">
         <FadeIn>
           <header className="mx-auto flex max-w-5xl flex-col text-center">
             <h1 className="mt-6 font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl">
@@ -32,14 +32,14 @@ export default async function BlogArticleWrapper({
             >
               {formatDate(article.date)}
             </time> */}
-            <p className="mt-6 text-sm font-semibold text-neutral-950">
-              by {article.author.name}, {article.author.role}
+            <p className="mt-2 text-sm font-semibold text-neutral-950">
+              {article.author.name}, {article.author.role}
             </p>
           </header>
         </FadeIn>
 
         <FadeIn>
-          <MDXComponents.wrapper className="mt-24 sm:mt-32 lg:mt-40">
+          <MDXComponents.wrapper className="mt-24 sm:mt-32 lg:mt-18">
             {children}
           </MDXComponents.wrapper>
         </FadeIn>

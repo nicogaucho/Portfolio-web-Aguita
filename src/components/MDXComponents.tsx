@@ -20,14 +20,14 @@ export const MDXComponents = {
     return (
       <div
         className={clsx(
-          'group isolate my-10 overflow-hidden rounded-4xl bg-neutral-100 max-sm:-mx-6',
+          'group isolate my-8 overflow-hidden rounded-4xl bg-neutral-100 max-sm:-mx-6',
           className,
         )}
       >
         <GrayscaleTransitionImage
           {...props}
           sizes="(min-width: 768px) 42rem, 100vw"
-          className="aspect-16/10 w-full object-cover"
+          className="aspect-2/1 w-full object-cover"
         />
       </div>
     )
@@ -37,7 +37,7 @@ export const MDXComponents = {
     ...props
   }: React.ComponentPropsWithoutRef<typeof StatList>) {
     return (
-      <StatList className={clsx('my-32 max-w-none!', className)} {...props} />
+      <StatList className={clsx('my-8 max-w-none!', className)} {...props} />
     )
   },
   StatListItem,
@@ -48,7 +48,7 @@ export const MDXComponents = {
     return (
       <div
         className={clsx(
-          'my-10 max-sm:-mx-6 max-sm:flex max-sm:overflow-x-auto',
+          'my-4 max-sm:-mx-6 max-sm:flex max-sm:overflow-x-auto',
           className,
         )}
       >
@@ -77,7 +77,7 @@ export const MDXComponents = {
         <p className="font-display text-sm font-bold tracking-widest text-neutral-950 uppercase">
           Top tip
         </p>
-        <div className="mt-4">{children}</div>
+        <div className="mt-2">{children}</div>
       </Border>
     )
   },
