@@ -70,7 +70,7 @@ export function Logo({
         dominantBaseline="middle"
         className={clsx(
           'font-display text-3xl font-semibold',
-          invert ? 'fill-white' : 'fill-neutral-950',
+          invert ? 'fill-white' : 'fill-neutral-950 hidden sm:block',
         )}
       >
         Digital consulting aguita
