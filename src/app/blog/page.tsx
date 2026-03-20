@@ -22,31 +22,30 @@ export default async function Blog() {
 
   return (
     <>
-      <PageIntro eyebrow="Blog" title="The latest articles and news">
+      <PageIntro eyebrow="What we do" title="Services">
         <p>
-          Stay up-to-date with the latest industry news as our marketing teams
-          finds new ways to re-purpose old CSS tricks articles.
+          We are developing expertise in building interactive digital experiences focused on ocean and environmental awareness, including map-based platforms and data visualization tools designed to communicate real-world impact.
         </p>
       </PageIntro>
 
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
-        <div className="space-y-24 lg:space-y-32">
+      <Container className="mt-24 sm:mt-32 lg:mt-20">
+        <div className="space-y-24 lg:space-y-10">
           {articles.map((article) => (
             <FadeIn key={article.href}>
               <article>
-                <Border className="pt-16">
+                <Border className="pt-10">
                   <div className="relative lg:-mx-4 lg:flex lg:justify-end">
                     <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
                       <h2 className="font-display text-2xl font-semibold text-neutral-950">
                         <Link href={article.href}>{article.title}</Link>
                       </h2>
                       <dl className="lg:absolute lg:top-0 lg:left-0 lg:w-1/3 lg:px-4">
-                        <dt className="sr-only">Published</dt>
+                        {/* <dt className="sr-only">Published</dt>
                         <dd className="absolute top-0 left-0 text-sm text-neutral-950 lg:static">
                           <time dateTime={article.date}>
                             {formatDate(article.date)}
                           </time>
-                        </dd>
+                        </dd> */}
                         <dt className="sr-only">Author</dt>
                         <dd className="mt-6 flex gap-x-4">
                           <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">

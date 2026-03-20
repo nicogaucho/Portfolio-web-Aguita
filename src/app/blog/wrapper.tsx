@@ -26,12 +26,12 @@ export default async function BlogArticleWrapper({
             <h1 className="mt-6 font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl">
               {article.title}
             </h1>
-            <time
+            {/* <time
               dateTime={article.date}
               className="order-first text-sm text-neutral-950"
             >
               {formatDate(article.date)}
-            </time>
+            </time> */}
             <p className="mt-6 text-sm font-semibold text-neutral-950">
               by {article.author.name}, {article.author.role}
             </p>
@@ -48,7 +48,7 @@ export default async function BlogArticleWrapper({
       {moreArticles.length > 0 && (
         <PageLinks
           className="mt-24 sm:mt-32 lg:mt-40"
-          title="More articles"
+          title="Related services"
           pages={moreArticles}
         />
       )}

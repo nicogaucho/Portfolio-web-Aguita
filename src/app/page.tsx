@@ -82,7 +82,7 @@ function CaseStudies({
             <FadeIn key={caseStudy.href} className="flex">
               <article className="relative flex w-full flex-col rounded-3xl shadow-md p-6 transition sm:p-8">
                 <h3>
-                  <Link href={caseStudy.href}>
+                  <Link /* href={caseStudy.href}  */href="#">
                     <span className="absolute inset-0 rounded-3xl" />
                     <Image
                       src={caseStudy.logo}
