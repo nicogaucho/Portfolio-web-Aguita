@@ -11,7 +11,7 @@ export const MDXComponents = {
     className,
     ...props
   }: React.ComponentPropsWithoutRef<typeof Blockquote>) {
-    return <Blockquote className={clsx('my-32', className)} {...props} />
+    return <Blockquote className={clsx('my-2', className)} {...props} />
   },
   img: function Img({
     className,
@@ -37,7 +37,7 @@ export const MDXComponents = {
     ...props
   }: React.ComponentPropsWithoutRef<typeof StatList>) {
     return (
-      <StatList className={clsx('my-8 max-w-none!', className)} {...props} />
+      <StatList className={clsx('my-2 max-w-none!', className)} {...props} />
     )
   },
   StatListItem,
@@ -48,7 +48,7 @@ export const MDXComponents = {
     return (
       <div
         className={clsx(
-          'my-4 max-sm:-mx-6 max-sm:flex max-sm:overflow-x-auto',
+          'max-sm:-mx-6 max-sm:flex max-sm:overflow-x-auto',
           className,
         )}
       >
@@ -62,7 +62,7 @@ export const MDXComponents = {
     className,
     ...props
   }: React.ComponentPropsWithoutRef<typeof TagList>) {
-    return <TagList className={clsx('my-6', className)} {...props} />
+    return <TagList className={clsx('my-1', className)} {...props} />
   },
   TagListItem,
   TopTip({
