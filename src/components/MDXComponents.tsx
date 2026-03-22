@@ -5,6 +5,7 @@ import { Border } from '@/components/Border'
 import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 import { StatList, StatListItem } from '@/components/StatList'
 import { TagList, TagListItem } from '@/components/TagList'
+import { List, ListItem } from '@/components/List'
 
 export const MDXComponents = {
   Blockquote({
@@ -65,6 +66,13 @@ export const MDXComponents = {
     return <TagList className={clsx('my-1', className)} {...props} />
   },
   TagListItem,
+  List({
+    className,
+    ...props
+  }: React.ComponentPropsWithoutRef<typeof List>) {
+    return <List className={clsx('my-1', className)} {...props} />
+  },
+  ListItem,
   TopTip({
     children,
     className,

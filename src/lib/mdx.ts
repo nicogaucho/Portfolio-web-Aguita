@@ -36,6 +36,7 @@ export interface Article {
     role: string
     image: ImagePropsWithOptionalAlt
   }
+  tools?: Array<string>
 }
 
 export interface CaseStudy {

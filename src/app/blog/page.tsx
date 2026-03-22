@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
+import { TagList, TagListItem } from '@/components/TagList'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
@@ -66,6 +67,15 @@ export default async function Blog() {
                       <p className="mt-6 max-w-2xl text-base text-neutral-600">
                         {article.description}
                       </p>
+                          
+                      <h3 className="mt-4 font-display text-base font-semibold text-neutral-950">
+                        Some tools we use:
+                      </h3>
+                      <TagList className="mt-4">
+                        {article.tools?.map((tool) => (
+                          <TagListItem>{tool}</TagListItem>
+                        ))}
+                      </TagList>
                       <Button
                         href={article.href}
                         aria-label={`Read more: ${article.title}`}

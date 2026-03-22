@@ -49,11 +49,22 @@ function DribbbleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function LinkedInIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        fill="currentColor"
+        d="M20.447 20.452H16.89v-5.569c0-1.328-.025-3.037-1.85-3.037-1.851 0-2.134 1.445-2.134 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.368-1.85 3.6 0 4.266 2.368 4.266 5.451v6.29ZM5.337 7.433a2.063 2.063 0 1 1 0-4.126 2.063 2.063 0 0 1 0 4.126ZM6.999 20.452H3.674V9h3.325v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451c.98 0 1.778-.774 1.778-1.729V1.729C24 .774 23.205 0 22.225 0Z"
+      />
+    </svg>
+  )
+}
+
 export const socialMediaProfiles = [
-  { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
-  { title: 'Instagram', href: 'https://instagram.com', icon: InstagramIcon },
-  { title: 'GitHub', href: 'https://github.com', icon: GitHubIcon },
-  { title: 'LinkedIn', href: 'https://linkedin.com', icon: GitHubIcon},
+  { title: 'Facebook', href: 'https://www.facebook.com/people/Aguita-House/100063668527547/?mibextid=wwXIfr&rdid=gei1AvavadpMVFsV&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BaL67vvWH%2F%3Fmibextid%3DwwXIfr', icon: FacebookIcon },
+  { title: 'Instagram', href: 'https://www.instagram.com/aguita_house?igsh=bXcxOTM2NHJ0MzQx', icon: InstagramIcon },
+  { title: 'GitHub', href: 'https://github.com/nicogaucho', icon: GitHubIcon },
+  { title: 'LinkedIn', href: 'https://www.linkedin.com/in/jacopo-scafura/', icon: LinkedInIcon},
 ]
 
 export function SocialMedia({

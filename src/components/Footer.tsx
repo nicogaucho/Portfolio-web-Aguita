@@ -18,15 +18,15 @@ const navigation = [
             See all <span aria-hidden="true">&rarr;</span>
           </>
         ),
-        href: '/work',
+        href: '/',
       },
     ],
   },
   {
     title: 'Company',
     links: [
-      { title: 'About', href: '/' },
-      { title: 'Services', href: '/' },
+      { title: 'About', href: '/about' },
+      { title: 'Services', href: '/blog' },
       { title: 'Privacy policy', href: '/' },
       { title: 'Contact us', href: '/' },
     ],
