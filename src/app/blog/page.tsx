@@ -73,7 +73,7 @@ export default async function Blog() {
                       </h3>
                       <TagList className="mt-4">
                         {article.tools?.map((tool) => (
-                          <TagListItem>{tool}</TagListItem>
+                          <TagListItem key={tool}>{tool}</TagListItem>
                         ))}
                       </TagList>
                       <Button
