@@ -11,9 +11,9 @@ import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
 import imageNico from '@/images/team/nico.jpeg'
 import imageDamiano from '@/images/team/Damiano.png'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
 import imageJaco from '@/images/team/Jacopo.png'
-import imageChelsea from '@/images/team/chelsea-hagon.jpg'
+import imageGabriella from '@/images/team/Gabriella.png'
+import imageEuge from '@/images/team/Eugenie.jpeg'
 import bgCard from '@/images/bg-card.jpg'
 import { loadArticles } from '@/lib/mdx'
 
@@ -73,12 +73,12 @@ const team = [
       {
         name: 'Gabriella Vitiello',
         role: 'Manager / Project Manager',
-        image: { src: imageChelsea },
+        image: { src: imageGabriella },
       },
       {
         name: 'Eugenie Chereau',
         role: 'Manager / Photographer',
-        image: { src: imageEmmaDorsey },
+        image: { src: imageEuge },
       },
     ],
   },
