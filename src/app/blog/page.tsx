@@ -10,7 +10,82 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { loadArticles } from '@/lib/mdx'
-import { Values } from '../process/page';
+import { GridList, GridListItem } from '@/components/GridList'
+import { GridPattern } from '@/components/GridPattern'
+import { ArrowIcon } from '@/components/PageLinks'
+import { SectionIntro } from '@/components/SectionIntro'
+
+function Values() {
+  return (
+    <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
+      <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-linear-to-b from-neutral-50">
+        <GridPattern
+          className="absolute inset-0 h-full w-full fill-neutral-100 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
+          yOffset={-270}
+        />
+      </div>
+
+      <SectionIntro
+        eyebrow="More services"
+        title="Sustainable tourism, since 2020"
+      >
+        <p>
+          Since 2020 we have been guiding hostels in
+          Las Palmas de Gran Canaria on a path of conscious growth. Every
+          project starts by listening — to the land, to the people who live
+          here, and to the travellers who arrive curious. Our goal is a
+          tourism that leaves something good behind.
+        </p>
+        <Link
+          href="/process"
+          className="mt-6 flex gap-x-3 text-base font-semibold text-neutral-950 transition hover:text-neutral-700"
+          aria-label={`Read more: /process`}
+        >
+          Discover more
+          <ArrowIcon className="w-6 flex-none fill-current" />
+          <span className="absolute inset-0" />
+        </Link>
+      </SectionIntro>
+
+
+      <Container className="mt-24">
+        <GridList>
+          <GridListItem title="Staff Training">
+            People are the heart of every hospitality project. We train teams
+            to welcome guests with genuine warmth, turning every stay into
+            a memory worth carrying home.
+          </GridListItem>
+          <GridListItem title="Hostel Setup & Launch">
+            From the first idea to opening day, we support each project through
+            its most critical phase — operations, licenses, and the identity
+            of the space — with hands-on experience and care for every detail.
+          </GridListItem>
+          <GridListItem title="Revenue Management">
+            We help properties find the right balance between occupancy and
+            profitability, with pricing strategies built around Grancanaria
+            market dynamics and seasonal rhythms.
+          </GridListItem>
+          {/* <GridListItem title="Digital Marketing">
+            We tell your story on the channels that matter — OTAs, social
+            media, and local search — to attract exactly the kind of traveller
+            who will love what you have built.
+          </GridListItem> */}
+          {/* <GridListItem title="Sustainability Certifications">
+            We guide hostels through recognised certifications such as Green
+            Key and Biosphere, turning sustainable values into concrete,
+            measurable everyday practices.
+          </GridListItem> */}
+          {/* <GridListItem title="Local Territory Promotion">
+            We build bridges between properties and the soul of Las Palmas —
+            local artisans, producers, guides, and authentic itineraries that
+            enrich every traveller&apos;s experience and give back to the community.
+          </GridListItem> */}
+        </GridList>
+      </Container>
+    </div>
+  )
+}
+
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -81,7 +156,7 @@ export default async function Blog() {
                         aria-label={`Read more: ${article.title}`}
                         className="mt-8"
                       >
-                        Read more
+                        More detail
                       </Button>
                     </div>
                   </div>
