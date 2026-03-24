@@ -26,7 +26,7 @@ export default async function BlogArticleWrapper({
             <h1 className="mt-6 font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl">
               {article.title}
             </h1>
-            {/* <time
+            {/* <time></time>
               dateTime={article.date}
               className="order-first text-sm text-neutral-950"
             >
