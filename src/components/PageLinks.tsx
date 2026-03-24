@@ -8,7 +8,7 @@ import { GridPattern } from '@/components/GridPattern'
 import { SectionIntro } from '@/components/SectionIntro'
 import { formatDate } from '@/lib/formatDate'
 
-function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+export function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 24 6" aria-hidden="true" {...props}>
       <path

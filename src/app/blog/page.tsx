@@ -9,8 +9,8 @@ import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
-import { formatDate } from '@/lib/formatDate'
 import { loadArticles } from '@/lib/mdx'
+import { Values } from '../process/page';
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -23,7 +23,7 @@ export default async function Blog() {
 
   return (
     <>
-      <PageIntro eyebrow="What we do" title="Services">
+      <PageIntro eyebrow="What we do" title="Digital Services">
         <p>
           We are developing expertise in building interactive digital experiences focused on ocean and environmental awareness, including map-based platforms and data visualization tools designed to communicate real-world impact.
         </p>
@@ -91,6 +91,8 @@ export default async function Blog() {
           ))}
         </div>
       </Container>
+
+      <Values />
 
       <ContactSection />
     </>

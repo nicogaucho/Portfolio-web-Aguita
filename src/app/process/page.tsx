@@ -11,9 +11,12 @@ import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
+import { ArrowIcon } from '@/components/PageLinks'
 import imageLaptop from '@/images/laptop.jpg'
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
+import Link from 'next/link'
+
 
 function Section({
   title,
@@ -184,7 +187,7 @@ function Deliver() {
   )
 }
 
-function Values() {
+export function Values() {
   return (
     <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
       <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-linear-to-b from-neutral-50">
@@ -195,43 +198,59 @@ function Values() {
       </div>
 
       <SectionIntro
-        eyebrow="Our values"
-        title="Balancing reliability and innovation"
+        eyebrow="More services"
+        title="Sustainable tourism, since 2020"
       >
         <p>
-          We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          Since 2020 we have been guiding hostels in
+          Las Palmas de Gran Canaria on a path of conscious growth. Every
+          project starts by listening — to the land, to the people who live
+          here, and to the travellers who arrive curious. Our goal is a
+          tourism that leaves something good behind.
         </p>
+        <Link
+          href="/process"
+          className="mt-6 flex gap-x-3 text-base font-semibold text-neutral-950 transition hover:text-neutral-700"
+          aria-label={`Read more: /process`}
+        >
+          Read more
+          <ArrowIcon className="w-6 flex-none fill-current" />
+          <span className="absolute inset-0" />
+        </Link>
       </SectionIntro>
+
 
       <Container className="mt-24">
         <GridList>
-          <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+          <GridListItem title="Staff Training">
+            People are the heart of every hospitality project. We train teams
+            to welcome guests with genuine warmth, turning every stay into
+            a memory worth carrying home.
           </GridListItem>
-          <GridListItem title="Efficient">
-            We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+          <GridListItem title="Hostel Setup & Launch">
+            From the first idea to opening day, we support each project through
+            its most critical phase — operations, licenses, and the identity
+            of the space — with hands-on experience and care for every detail.
           </GridListItem>
-          <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
+          <GridListItem title="Revenue Management">
+            We help properties find the right balance between occupancy and
+            profitability, with pricing strategies built around Grancanaria
+            market dynamics and seasonal rhythms.
           </GridListItem>
-          <GridListItem title="Honest">
-            We are transparent about all of our processes, banking on the simple
-            fact our clients never actually read anything.
+          <GridListItem title="Digital Marketing">
+            We tell your story on the channels that matter — OTAs, social
+            media, and local search — to attract exactly the kind of traveller
+            who will love what you have built.
           </GridListItem>
-          <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
+          <GridListItem title="Sustainability Certifications">
+            We guide hostels through recognised certifications such as Green
+            Key and Biosphere, turning sustainable values into concrete,
+            measurable everyday practices.
           </GridListItem>
-          <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+          <GridListItem title="Local Territory Promotion">
+            We build bridges between properties and the soul of Las Palmas —
+            local artisans, producers, guides, and authentic itineraries that
+            enrich every traveller&apos;s experience and give back to the community.
           </GridListItem>
         </GridList>
       </Container>
