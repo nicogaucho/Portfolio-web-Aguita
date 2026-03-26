@@ -14,6 +14,7 @@ import { TagList, TagListItem } from '@/components/TagList'
 import { ArrowIcon } from '@/components/PageLinks'
 import imageLaptop from '@/images/laptop.jpg'
 import imageMeeting from '@/images/meeting.jpg'
+import imageMeet from '@/images/meet.jpeg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
 import imageAguitaTeam from '@/images/aguitateam.png'
 import Link from 'next/link'
@@ -40,7 +41,7 @@ function Section({
               className="justify-center lg:justify-end lg:group-even/section:justify-start"
             /> */}
             <Image
-                src={imageAguitaTeam}
+                src={image.src}
                 alt="aguita team"
                 className="justify-center lg:justify-end"
               />
@@ -106,35 +107,24 @@ function Discover() {
 
 function Build() {
   return (
-    <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="Work, surf, connect" image={{ src: imageAguitaTeam, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap
-          for each product and start working towards delivery. The roadmap is an
-          intricately tangled mess of technical nonsense designed to drag the
-          project out as long as possible.
+          We never set out to build just a place to sleep. Agüita was created as a space where people could feel something: connection, freedom, belonging. What started as one house became a small family of homes, each with its own personality but the same soul. Here, strangers share tables, stories turn into friendships, and leaving is always the hardest part.
         </p>
         <p>
-          Each client is assigned a key account manager to keep lines of
-          communication open and obscure the actual progress of the project.
-          They act as a buffer between the client’s incessant nagging and the
-          development team who are hard at work scouring open source projects
-          for code to re-purpose.
+          Gran Canaria isn’t just a destination, it’s a way of living. Days are active, outdoors and connected to nature. Surf in the morning, explore during the day, share food in the evening. Time slows down, priorities shift, and the simple things start to matter more. It’s easy to be healthy here without trying, moving more, eating better, sleeping deeper. And maybe that’s why so many people come for a short stay… and end up staying much longer.
         </p>
         <p>
-          Our account managers are trained to only reply to client emails after
-          9pm, several days after the initial email. This reinforces the general
-          aura that we are very busy and dissuades clients from asking for
-          changes.
+          The island is full of contrast, and that’s exactly what makes it special. But beyond the landscapes, there’s something else: a slower rhythm, a softer way of living, and a feeling that life happens more outside than in.
         </p>
       </div>
 
       <Blockquote
-        author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
+        author={{ name: 'Damiano Finizio', role: 'Co-Founder of Agüita' }}
         className="mt-12"
       >
-        Studio were so regular with their progress updates we almost began to
-        think they were automated!
+        Let the ocean become part of your daily rhythm without you even noticing.
       </Blockquote>
     </Section>
   )
@@ -142,7 +132,7 @@ function Build() {
 
 function Deliver() {
   return (
-    <Section title="How we do it" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="How we do it" image={{ src: imageMeet, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           Since 2020 we have been guiding hostels in
@@ -202,8 +192,8 @@ export default function Process() {
 
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-18 lg:space-y-32">
         {/* <Discover /> */}
-        {/* <Build /> */}
         <Deliver />
+        <Build />
       </div>
 
       {/* <Values /> */}
